@@ -236,7 +236,7 @@
                         if(data =='1') {
                             layer.msg('添加成功!', {icon: 1, time: 2000}, function () {
                                 var index = parent.layer.getFrameIndex(window.name);
-                                parent.$('.btn-refresh').click();
+                                parent.window.location =parent.window.location;
                                 parent.layer.close(index);
                             });
                         }else{
