@@ -37,6 +37,7 @@ class MemberController extends Controller
 
             return $result ? '1':'0';
 
+
         }else{
             $country =DB::table('area')->where('pid','0')->get();
             return view('admin.member.add',compact('country'));
