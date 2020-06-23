@@ -54,6 +54,20 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
+        'qiniu' => [
+            'driver'  => 'qiniu',
+            'domains' => [
+                'default'   => 'qcdh5qlzn.bkt.clouddn.com',     //你的七牛域名
+                'https'     => '',                              //你的HTTPS域名
+                'custom'    => '',                              //Useless 没啥用，请直接使用上面的 default 项
+            ],
+            'access_key'=> 'iXF5ZUqEgBDaAwzv2AKz3P7kU6B9SmsC0AwDEm1l',  //AccessKey
+            'secret_key'=> 'oqahU69QgBYN6SrIoy4aLDxIHEgPg3L2eGBrr0ef',  //SecretKey
+            'bucket'    => 'zhouwenming',                               //Bucket名字
+            'notify_url'=> '',                                          //持久化处理回调地址
+            'access'    => 'public',                                    //空间访问控制 public 或 private
+
+        ],
 
         's3' => [
             'driver' => 's3',

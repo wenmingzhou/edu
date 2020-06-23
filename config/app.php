@@ -170,6 +170,7 @@ return [
         Mews\Captcha\CaptchaServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Overtrue\LaravelWeChat\ServiceProvider::class,
+        zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
         /*
          * Application Service Providers...
          */

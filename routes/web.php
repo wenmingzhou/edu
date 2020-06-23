@@ -50,6 +50,7 @@ Route::group(['prefix'=>'admin','middleware'=>['auth:admin','checkrbac']],functi
 
     //头像上传
     Route::post('uploader/webuploader','Admin\uploaderController@webuploader');
+    Route::post('uploader/qiniu','Admin\uploaderController@qiniu');
     //ajax联动
     Route::get('member/getareabyid','Admin\MemberController@getAreaById');
 });
