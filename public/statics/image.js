@@ -14,7 +14,10 @@ jQuery(function() {
 
     // 初始化Web Uploader
     uploader = WebUploader.create({
-
+        //添加一些自己需要的参数
+        formData:{
+            _token:$('input[name=_token]').val(),
+        },
         // 自动上传。
         auto: true,
 
@@ -45,7 +48,8 @@ jQuery(function() {
             '</div>'
             ),
             $img = $li.find('img');
-
+        //清除之前的数据
+        $('.thumbnail').remove();
         $list.append( $li );
 
         // 创建缩略图
@@ -75,8 +79,10 @@ jQuery(function() {
     });
 
     // 文件上传成功，给item添加成功class, 用样式标记上传成功。
-    uploader.on( 'uploadSuccess', function( file ) {
+    uploader.on( 'uploadSuccess', function( file,response ) {
         $( '#'+file.id ).addClass('upload-state-done');
+        //将返回值的值写到隐藏域中
+        $('input[name=avatar]').val(response.path);
     });
 
     // 文件上传失败，现实上传出错。

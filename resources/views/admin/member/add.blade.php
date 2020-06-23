@@ -76,7 +76,9 @@
            <div class="formControls col-xs-8 col-sm-9">
                <div id="uploader-demo">
                    <!--用来存放item-->
-                   <div id="fileList" class="uploader-list"></div>
+                   <div id="fileList" class="uploader-list">
+                       <input type="hidden" name="avatar" value="">
+                   </div>
                    <div id="filePicker">选择图片</div>
                </div>
            </div>
@@ -164,6 +166,7 @@
 
 <script type="text/javascript">
     $(function(){
+
         //选择国家之后要列出省份的数据
         $('select[name=country_id]').change(function () {
             var id =$(this).val();
