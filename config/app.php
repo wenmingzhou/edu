@@ -169,6 +169,7 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         Mews\Captcha\CaptchaServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Overtrue\LaravelWeChat\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -232,6 +233,7 @@ return [
         'Input' => Illuminate\Support\Facades\Input::class,
         'Captcha' => Mews\Captcha\Facades\Captcha::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'EasyWeChat' => Overtrue\LaravelWeChat\Facade::class,
     ],
 
 ];

@@ -18,8 +18,13 @@
     <link rel="stylesheet" type="text/css" href="/admin/lib/Hui-iconfont/1.0.8/iconfont.css" />
     <link rel="stylesheet" type="text/css" href="/admin/static/h-ui.admin/skin/default/skin.css" id="skin" />
     <link rel="stylesheet" type="text/css" href="/admin/static/h-ui.admin/css/style.css" />
+    <!--引入CSS-->
+    <link rel="stylesheet" type="text/css" href="/statics/webuploader/webuploader.css">
+
+
     <!--[if IE 6]>
     <script type="text/javascript" src="/admin/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <!--/meta 作为公共模版分离出去-->
@@ -66,14 +71,16 @@
                 <input type="text" class="input-text" placeholder="@" name="email" id="email">
             </div>
         </div>
-       {{-- <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3">附件：</label>
-            <div class="formControls col-xs-8 col-sm-9"> <span class="btn-upload form-group">
-				<input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly nullmsg="请添加附件！" style="width:200px">
-				<a href="javascript:void();" class="btn btn-primary radius upload-btn"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
-				<input type="file" multiple name="file-2" class="input-file">
-				</span> </div>
-        </div>--}}
+       <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">头像：</label>
+           <div class="formControls col-xs-8 col-sm-9">
+               <div id="uploader-demo">
+                   <!--用来存放item-->
+                   <div id="fileList" class="uploader-list"></div>
+                   <div id="filePicker">选择图片</div>
+               </div>
+           </div>
+        </div>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-3">所属地区：</label>
             <div class="formControls col-xs-8 col-sm-9">
@@ -151,6 +158,10 @@
 <script type="text/javascript" src="/admin/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
 <script type="text/javascript" src="/admin/lib/jquery.validation/1.14.0/validate-methods.js"></script>
 <script type="text/javascript" src="/admin/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<!--引入JS-->
+<script type="text/javascript" src="/statics/webuploader/webuploader.js"></script>
+<script type="text/javascript" src="/statics/image.js"></script>
+
 <script type="text/javascript">
     $(function(){
         //选择国家之后要列出省份的数据

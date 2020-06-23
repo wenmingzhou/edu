@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::any('/wechat', 'Home\WeChatController@serve');
+
 //后台路由部分
 Route::group(['prefix'=>'admin'],function (){
     //后台登录页面
@@ -51,4 +53,6 @@ Route::group(['prefix'=>'admin','middleware'=>['auth:admin','checkrbac']],functi
     //ajax联动
     Route::get('member/getareabyid','Admin\MemberController@getAreaById');
 });
+
+
 
