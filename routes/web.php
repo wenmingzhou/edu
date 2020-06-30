@@ -53,6 +53,11 @@ Route::group(['prefix'=>'admin','middleware'=>['auth:admin','checkrbac']],functi
     Route::post('uploader/qiniu','Admin\uploaderController@qiniu');
     //ajax联动
     Route::get('member/getareabyid','Admin\MemberController@getAreaById');
+
+    //导出
+    Route::get('member/export','Admin\MemberController@export');
+    //导入
+    Route::any('member/import','Admin\MemberController@import');
 });
 
 
